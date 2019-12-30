@@ -8,13 +8,16 @@ print("=======================================")
 create_switch(169, "sim/cockpit2/controls/gear_handle_down", 0, 1, 0)
 
 -- AUTOPILOT ALTITUDE
-create_positive_edge_increment(163,"sim/cockpit/autopilot/altitude",0,1000,50000,3)
-create_positive_edge_decrement(162,"sim/cockpit/autopilot/altitude",0,1000,0,3)
+create_positive_edge_increment(163,"sim/cockpit/autopilot/altitude",0,1000,49000,0)
+create_positive_edge_decrement(162,"sim/cockpit/autopilot/altitude",0,1000,1000,0)
+
+-- AUTOPILOT HEADING
+create_positive_edge_increment(177,"sim/cockpit/autopilot/heading_mag",0,10,400,0)
+create_positive_edge_decrement(176,"sim/cockpit/autopilot/heading_mag",0,10,-100,0)
+
+set("sim/cockpit/autopilot/heading_mag", -100)
 
 do_every_frame([[
-
--- AUTOPILOT ALTITUDE CORRECTION
-set("sim/cockpit/autopilot/altitude", 1000 * math.floor(get("sim/cockpit/autopilot/altitude")/1000))
 
 -- PARKING BRAKE
 	local parking_brake = get("sim/cockpit2/controls/parking_brake_ratio")
