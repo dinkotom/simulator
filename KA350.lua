@@ -19,7 +19,15 @@ create_positive_edge_decrement(178,"sim/cockpit/autopilot/heading_mag",0,10,-100
 create_positive_edge_increment(177,"sim/cockpit/autopilot/heading_mag",0,1,400,0)
 create_positive_edge_decrement(176,"sim/cockpit/autopilot/heading_mag",0,1,-100,0)
 
-set("sim/cockpit/autopilot/heading_mag", -100)
+set("sim/cockpit/autopilot/heading_mag", 0)
+
+-- quadrant buttons 334 - 339
+set_button_assignment(334, "KA350/cmd/avpanel/com1/freqMajInc")
+set_button_assignment(335, "KA350/cmd/avpanel/com1/freqMajDec")
+set_button_assignment(336, "KA350/cmd/avpanel/com1/freqMinInc")
+set_button_assignment(337, "KA350/cmd/avpanel/com1/freqMinDec")
+set_button_assignment(338, "KA350/cmd/avpanel/com1/xfrMemInc")
+set_button_assignment(339, "KA350/cmd/avpanel/com1/xfrMemDec")
 
 -- MCP
 set_button_assignment(186, "KA350/cmd/cPanel/efisSCP/courseDec")
@@ -41,8 +49,8 @@ set_button_assignment(167, "KA350/cmd/cPanel/autopilotCP/yawEng")
 -- YOKE
 set_button_assignment(325, "KA350/cmd/cPanel/autopilotCP/pitchSwitchDec")
 set_button_assignment(324, "KA350/cmd/cPanel/autopilotCP/pitchSwitchInc")
-set_button_assignment(323, "sim/flight_controls/pitch_trim_down")
-set_button_assignment(322, "sim/flight_controls/pitch_trim_up")
+set_button_assignment(322, "sim/flight_controls/pitch_trim_down")
+set_button_assignment(323, "sim/flight_controls/pitch_trim_up")
 set_button_assignment(326, "KA350/cmd/cPanel/autopilotCP/turnDec")
 set_button_assignment(327, "KA350/cmd/cPanel/autopilotCP/turnInc")
 set_button_assignment(321, "KA350/cmd/Yoke/AP_YD_ElecTrim_disc")
